@@ -61,7 +61,7 @@ public class PropToStringGenerator : IIncrementalGenerator
       StringBuilder sb = new();
       foreach (var prop in classInfo?.PropertyNames)
       {
-         sb.Append($@"-metadata {prop.DisplayName}={{JsonSerializer.Serialize({prop.PropName})}} ");
+         sb.Append($@"-metadata {prop.Name}={{JsonSerializer.Serialize({prop.Name})}} ");
       }
 
       //TODO : Only include namespace is "ns" is not null
